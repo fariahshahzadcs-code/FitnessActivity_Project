@@ -1,5 +1,5 @@
 Name: Fariah Shahzad
-Roll No: XXXXX
+Roll No: 13
 
 Project Title:
 Smart Fitness Activity Tracking & Analysis Library
@@ -24,3 +24,6 @@ Combined Activity:
 Duration: 75 min
 Calories: 450
 Distance: 13 km
+
+GitHub Repository:
+https://github.com/yourusername/FitnessActivity_Project
