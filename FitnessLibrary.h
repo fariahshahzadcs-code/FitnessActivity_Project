@@ -8,13 +8,13 @@ using namespace std;
 class FitnessActivity {
 private:
     string activityName;
-    double duration;   // minutes
+    double duration;   
     double calories;
-    double distance;   // km
+    double distance;   
 
 public:
 
-    // 🔹 Default Constructor
+   
     FitnessActivity() {
         activityName = "Unknown";
         duration = 0;
@@ -22,7 +22,7 @@ public:
         distance = 0;
     }
 
-    // 🔹 Parameterized Constructor
+   
     FitnessActivity(string name, double dur, double cal, double dist) {
         activityName = name;
         duration = dur;
@@ -30,9 +30,7 @@ public:
         distance = dist;
     }
 
-    // 🔁 FUNCTION OVERLOADING
-
-    // 1. Default input
+   
     void setActivity() {
         cout << "Enter Activity Name: ";
         cin >> activityName;
@@ -47,17 +45,17 @@ public:
         cin >> distance;
     }
 
-    // 2. Partial input
+    
     void setActivity(string name, double dur) {
         activityName = name;
         duration = dur;
 
-        // auto calculation
+       
         calories = dur * 5;
         distance = dur * 0.1;
     }
 
-    // 3. Full input
+    
     void setActivity(string name, double dur, double cal, double dist) {
         activityName = name;
         duration = dur;
@@ -65,8 +63,7 @@ public:
         distance = dist;
     }
 
-    // 🔁 EXTRA FUNCTION OVERLOADING (Analysis)
-
+    
     double calculateCalories() {
         return duration * 5;
     }
@@ -79,9 +76,7 @@ public:
         return duration * weight * intensity * 0.05;
     }
 
-    // ➕ OPERATOR OVERLOADING
-
-    // 1. Addition
+   
     FitnessActivity operator+(const FitnessActivity &obj) {
         FitnessActivity temp;
         temp.activityName = "Combined";
@@ -91,7 +86,7 @@ public:
         return temp;
     }
 
-    // 2. Subtraction
+    
     FitnessActivity operator-(const FitnessActivity &obj) {
         FitnessActivity temp;
         temp.activityName = "Difference";
@@ -101,7 +96,7 @@ public:
         return temp;
     }
 
-    // 3. Multiplication (repeat activity)
+    
     FitnessActivity operator*(int days) {
         FitnessActivity temp;
         temp.activityName = activityName + " (Repeated)";
@@ -111,17 +106,17 @@ public:
         return temp;
     }
 
-    // 4. Comparison
+   
     bool operator<(const FitnessActivity &obj) {
         return calories < obj.calories;
     }
 
-    // 5. Equality
+    
     bool operator==(const FitnessActivity &obj) {
         return (calories == obj.calories && duration == obj.duration);
     }
 
-    // 6. Output Operator
+   
     friend ostream& operator<<(ostream &out, const FitnessActivity &obj) {
         out << "\nActivity: " << obj.activityName << endl;
         out << "Duration: " << obj.duration << " min" << endl;
