@@ -26,4 +26,4 @@ Calories: 450
 Distance: 13 km
 
 GitHub Repository:
-https://github.com/yourusername/FitnessActivity_Project
+https://github.com/fariahshahzadcs-code/FitnessActivity_Project.git
